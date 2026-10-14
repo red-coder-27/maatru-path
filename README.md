@@ -231,17 +231,19 @@ The state machine enforces deliberate, validated status transitions:
 
 ```mermaid
 flowchart LR
-    A["[Open]\nCase Registered"] -->|Mark In Progress| B["[In Progress]\nUnder Follow-up"]
-    B -->|Resolve Blocker| C["[Resolved]\nRemediated"]
+    A["Open<br/>Case Registered"] -->|Mark In Progress| B["In Progress<br/>Under Follow-up"]
+    B -->|Resolve Blocker| C["Resolved<br/>Remediated"]
     A -->|Direct Resolution| C
     B -->|Return to Open| A
-    C -->|Deliberate Reopen\n(Mandatory Note)| B
-    C -->|Deliberate Reopen\n(Mandatory Note)| A
+    C -->|Reopen with mandatory note| B
+    C -->|Reopen with mandatory note| A
 ```
 
 - **Open → In Progress:** Worker begins active field investigation or assistance.
 - **In Progress → Resolved:** Obstacle remediated and benefit processing can resume.
-- **Resolved → In Progress / Open:** Deliberate reopening requires entering a justification note in a confirmation modal, which is recorded in the timeline as a `reopened` action event.
+- **Open → Resolved:** Direct resolution when an obstacle is verified as remediated upon intake.
+- **In Progress → Open:** Reverts case to open backlog if field follow-up is paused or re-assigned.
+- **Resolved → In Progress / Open:** Deliberate reopening requires entering a justification note in a confirmation modal, recorded in the timeline as an audited `reopened` action event.
 
 ---
 
