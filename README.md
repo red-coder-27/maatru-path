@@ -20,18 +20,6 @@
 
 ---
 
-## Visual Preview & Interface Walkthrough
-
-> [!NOTE]
-> **Screenshot Placeholder:** The repository provides a fully functional web interface runnable locally. To capture genuine application screenshots for presentation or evaluation portfolios, run `serverpod start` and `flutter run -d edge` and capture:
-> 1. `docs/screenshots/01_dashboard.png` — Real-time KPI summary cards, filter bar, and registered case cards.
-> 2. `docs/screenshots/02_create_case.png` — Registration modal with synthetic demo scenario template chips.
-> 3. `docs/screenshots/03_case_detail_actions.png` — Rule-based guidance cards with official department verification links.
-> 4. `docs/screenshots/04_timeline.png` — Chronological Blocker-to-Resolution Timeline showing creation, field note, and status transitions.
-> 5. `docs/screenshots/05_reopen_dialog.png` — Deliberate case reopening modal with mandatory audit justification.
-
----
-
 ## Table of Contents
 
 1. [Problem and Solution](#problem-and-solution)
