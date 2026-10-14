@@ -1,0 +1,26 @@
+class: CaseRecord
+table: case_record
+fields:
+  ### Synthetic demo applicant reference (e.g., 'DEMO-PMMVY-2024-001'). Never real PII.
+  applicantReference: String
+
+  ### Government scheme name (e.g., 'PMMVY', 'JSY').
+  schemeName: String
+
+  ### Blocker category (e.g., 'Aadhaar Linkage', 'Bank Account / IFSC', 'Documentation').
+  blockerCategory: String
+
+  ### Short blocker description detailing the issue.
+  blockerDescription: String
+
+  ### Priority level (e.g., 'High', 'Medium', 'Low').
+  priority: String
+
+  ### Current case status (e.g., 'Open', 'In Progress', 'Resolved').
+  status: String
+
+  ### Timestamp when the case was recorded.
+  createdAt: DateTime, default=now
+
+  ### Timestamp when the case was last updated.
+  updatedAt: DateTime?

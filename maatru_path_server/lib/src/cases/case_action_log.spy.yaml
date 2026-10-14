@@ -1,0 +1,20 @@
+class: CaseActionLog
+table: case_action_log
+fields:
+  ### Reference to the associated case record.
+  caseId: int, relation(parent=case_record, onDelete=Cascade)
+
+  ### Action type performed (e.g., 'created', 'status_change', 'note_added').
+  actionType: String
+
+  ### Previous status before the action, if applicable.
+  previousStatus: String?
+
+  ### New status after the action, if applicable.
+  newStatus: String?
+
+  ### Short action note describing remediation or update.
+  note: String?
+
+  ### Timestamp when the action was recorded.
+  createdAt: DateTime, default=now

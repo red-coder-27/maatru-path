@@ -1,0 +1,21 @@
+emailIdp:
+  - login:
+  - startRegistration:
+  - verifyRegistrationCode:
+  - finishRegistration:
+  - startPasswordReset:
+  - verifyPasswordResetCode:
+  - finishPasswordReset:
+  - hasAccount:
+jwtRefresh:
+  - refreshAccessToken:
+cases:
+  - createCase:
+  - listCases:
+  - getCase:
+  - updateBlockerStatus:
+  - getCaseHistory:
+  - addFollowUpNote:
+  - getRecommendedActions:
+greeting:
+  - hello:

@@ -1,0 +1,68 @@
+# Files and directories created by pub
+.dart_tool/
+**/.dart_tool/
+.packages
+**/.packages
+.pub/
+**/.pub/
+.pub-cache/
+**/.pub-cache/
+
+# Pubspec overrides
+pubspec_overrides.yaml
+
+# Flutter build artifacts and dependencies
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/ios/Flutter/.last_build_id
+lib/generated_plugin_registrant.dart
+
+# Serverpod runtime, database data, and generated web app
+.serverpod/
+**/.serverpod/
+**/sp_*.db*
+web/app/
+**/web/app/
+.scloud/
+
+# Passwords, secrets, and environment configurations
+config/passwords.yaml
+**/config/passwords.yaml
+config/firebase_service_account_key.json
+**/config/firebase_service_account_key.json
+*.env
+.env.*
+
+# Logs and runtime diagnostics
+*.log
+*.tmp
+server-start.log
+
+# Documentation output
+doc/api/
+**/doc/api/
+
+# IDE and Editor files
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+*.ipr
+*.iws
+.vscode/mcp.json
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Agents and local tools
+.dart_skills/
+.agents/
+.claude/
+.gemini/
+.cursor/
+.codex/
+.mcp.json

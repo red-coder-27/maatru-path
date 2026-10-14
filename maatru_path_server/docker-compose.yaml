@@ -1,0 +1,44 @@
+services:
+  # Development services
+  postgres:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "8090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: maatru_path
+      POSTGRES_PASSWORD: "-jnIPWTEwFSNu02SL6FhhXt-dOJT7xRn"
+    volumes:
+      - maatru_path_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6.2.6
+    ports:
+      - "8091:6379"
+    command: redis-server --requirepass "chO60JDywsqnZz2xDkQmYqBLLPpWdBW5"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  # Test services
+  postgres_test:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "9090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: maatru_path_test
+      POSTGRES_PASSWORD: "f5856XjatbULGmFN8WTzTNECBbsTSxSA"
+    volumes:
+      - maatru_path_test_data:/var/lib/postgresql/data
+
+  redis_test:
+    image: redis:6.2.6
+    ports:
+      - "9091:6379"
+    command: redis-server --requirepass "ojWBVtz2f2C982jsyrgzzvk1cM4OpWTK"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+volumes:
+  maatru_path_data:
+  maatru_path_test_data:

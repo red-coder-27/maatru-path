@@ -1,0 +1,10 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.12.2'
+
+workspace:
+  - maatru_path_client
+  - maatru_path_server
+  - maatru_path_flutter

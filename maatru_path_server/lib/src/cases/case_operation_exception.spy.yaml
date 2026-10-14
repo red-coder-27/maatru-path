@@ -1,0 +1,4 @@
+exception: CaseOperationException
+fields:
+  ### Human-readable safe validation or business error message.
+  message: String

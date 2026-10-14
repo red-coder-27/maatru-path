@@ -1,0 +1,19 @@
+class: RecommendedAction
+fields:
+  ### The blocker category this recommendation applies to.
+  category: String
+
+  ### Concise explanation of the obstacle.
+  explanation: String
+
+  ### Prioritized next step for the community worker.
+  prioritizedNextAction: String
+
+  ### Practical follow-up suggestion.
+  practicalFollowUp: String
+
+  ### Whether this guidance requires official department verification.
+  requiresOfficialVerification: bool
+
+  ### Official portal or verification URL, populated only when verified.
+  officialReferenceUrl: String?
